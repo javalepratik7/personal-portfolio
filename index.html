@@ -3,1360 +3,573 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
-<!--     <link rel="stylesheet" href="style.css"> -->
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-  }
-  
-  body {
-    background-color: #ffffff;
-    color: #1a1a1a;
-    overflow-x: hidden;
-  }
-  
-  /* Header styles */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 5%;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    z-index: 1000;
-  }
-  
-  .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #ff7b7b;
-  }
-  
-  .nav-links {
-    font-size: 22px;
-    font-weight: bold;
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #1a1a1a;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links a:hover,
-  .nav-links a.active {
-    color: #ff7b7b;
-  }
-  
-  .social-icons {
-    font-size: 22px;
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .social-icons a {
-    color: #1a1a1a;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .social-icons a:hover {
-    color: #ff7b7b;
-  }
-  
-  /* Hero section styles */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 5%;
-    position: relative;
-    margin-top: 2rem;
-  }
-  
-  .hero-content {
-    margin-top: 100px;
-    flex: 1;
-    z-index: 1;
-  }
-  
-  .greeting {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  
-  .role {
-    font-size: 2.5rem;
-    color: #ff7b7b;
-    margin-bottom: 0.5rem;
-  }
-  
-  .location {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .cta-button {
-    background-color: #ff7b7b;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #ff6666;
-  }
-  
-  .hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-  }
-  
-  .hero-image img {
-    max-width: 80%;
-    height: auto;
-  }
-  
-  .background-text {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 15rem;
-    font-weight: 700;
-    color: rgba(255, 123, 123, 0.1);
-    z-index: 0;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 1024px) {
-    .hero {
-      flex-direction: column;
-      text-align: center;
-      padding-top: 5rem;
-    }
-  
-    .hero-content {
-      margin-bottom: 2rem;
-    }
-  
-    .background-text {
-      font-size: 10rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      gap: 1rem;
-      padding: 1rem;
-    }
-  
-    .nav-links {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
-  
-    h1 {
-      font-size: 2.5rem;
-    }
-  
-    .role {
-      font-size: 2rem;
-    }
-  
-    .background-text {
-      font-size: 5rem;
-    }
-  }
-  
-  /* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-  }
-  
-  body {
-    background-color: #ffffff;
-    color: #1a1a1a;
-    overflow-x: hidden;
-  }
-  
-  /* Header styles */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 5%;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    z-index: 1000;
-  }
-  
-  .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #ff7b7b;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #1a1a1a;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links a:hover,
-  .nav-links a.active {
-    color: #ff7b7b;
-  }
-  
-  .social-icons {
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .social-icons a {
-    color: #1a1a1a;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .social-icons a:hover {
-    color: #ff7b7b;
-  }
-  
-  /* Hero section styles */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 5%;
-    position: relative;
-    margin-top: 2rem;
-  }
-  
-  .hero-content {
-    flex: 1;
-    z-index: 1;
-  }
-  
-  .greeting {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  
-  .role {
-    font-size: 2.5rem;
-    color: #ff7b7b;
-    margin-bottom: 0.5rem;
-  }
-  
-  .location {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .cta-button {
-    background-color: #ff7b7b;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #ff6666;
-  }
-  
-  .hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-  }
-  
-  .hero-image img {
-    max-width: 80%;
-    height: auto;
-  }
-  
-  .background-text {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 15rem;
-    font-weight: 700;
-    color: rgba(255, 123, 123, 0.1);
-    z-index: 0;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 1024px) {
-    .hero {
-      flex-direction: column;
-      text-align: center;
-      padding-top: 5rem;
-    }
-  
-    .hero-content {
-      margin-bottom: 2rem;
-    }
-  
-    .background-text {
-      font-size: 10rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      gap: 1rem;
-      padding: 1rem;
-    }
-  
-    .nav-links {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
-  
-    h1 {
-      font-size: 2.5rem;
-    }
-  
-    .role {
-      font-size: 2rem;
-    }
-  
-    .background-text {
-      font-size: 5rem;
-    }
-  }
-  
-  /* Projects Section */
-  .projects {
-    padding: 5rem 5%;
-    background-color: #f8f9fa;
-  }
-  
-  .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #1a1a1a;
-  }
-  
-  .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .project-box {
-    perspective: 1000px;
-    height: 400px;
-  }
-  
-  .project-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.8s;
-  }
-  
-  .project-box:hover .project-content {
-    transform: rotateY(180deg);
-  }
-  
-  .project-front,
-  .project-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 15px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-front {
-    background: linear-gradient(145deg, #ffffff, #f3f3f3);
-  }
-  
-  .project-back {
-    transform: rotateY(180deg);
-    background: linear-gradient(145deg, #ff7b7b, #ff6666);
-    color: white;
-    text-align: center;
-  }
-  
-  .project-icon {
-    font-size: 4rem;
-    color: #ff7b7b;
-    margin-bottom: 1.5rem;
-  }
-  
-  .project-front h3 {
-    font-size: 1.5rem;
-    color: #1a1a1a;
-    margin-top: 1rem;
-  }
-  
-  .project-back h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .project-back p {
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-  
-  .tech-stack {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-  }
-  
-  .tech-stack span {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.9rem;
-  }
-  
-  .project-link {
-    color: white;
-    text-decoration: none;
-    padding: 0.8rem 1.5rem;
-    border: 2px solid white;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-  }
-  
-  .project-link:hover {
-    background: white;
-    color: #ff7b7b;
-  }
-  
-  /* Add animation for project boxes */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .project-box {
-    opacity: 0;
-    animation: fadeInUp 0.6s ease forwards;
-  }
-  
-  .project-box:nth-child(1) {
-    animation-delay: 0.2s;
-  }
-  
-  .project-box:nth-child(2) {
-    animation-delay: 0.4s;
-  }
-  
-  .project-box:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .projects {
-      padding: 3rem 5%;
-    }
-  
-    .section-title {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-  
-    .project-box {
-      height: 350px;
-    }
-  }
-  
-  /* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-  }
-  
-  body {
-    background-color: #ffffff;
-    color: #1a1a1a;
-    overflow-x: hidden;
-  }
-  
-  /* Header styles */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 5%;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    z-index: 1000;
-  }
-  
-  .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #ff7b7b;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #1a1a1a;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links a:hover,
-  .nav-links a.active {
-    color: #ff7b7b;
-  }
-  
-  .social-icons {
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .social-icons a {
-    color: #1a1a1a;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .social-icons a:hover {
-    color: #ff7b7b;
-  }
-  
-  /* Hero section styles */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 5%;
-    position: relative;
-    margin-top: 2rem;
-  }
-  
-  .hero-content {
-    flex: 1;
-    z-index: 1;
-  }
-  
-  .greeting {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  
-  .role {
-    font-size: 2.5rem;
-    color: #ff7b7b;
-    margin-bottom: 0.5rem;
-  }
-  
-  .location {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .cta-button {
-    background-color: #ff7b7b;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #ff6666;
-  }
-  
-  .hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-  }
-  
-  .hero-image img {
-    max-width: 80%;
-    height: auto;
-  }
-  
-  .background-text {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 15rem;
-    font-weight: 700;
-    color: rgba(255, 123, 123, 0.1);
-    z-index: 0;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 1024px) {
-    .hero {
-      flex-direction: column;
-      text-align: center;
-      padding-top: 5rem;
-    }
-  
-    .hero-content {
-      margin-bottom: 2rem;
-    }
-  
-    .background-text {
-      font-size: 10rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      gap: 1rem;
-      padding: 1rem;
-    }
-  
-    .nav-links {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
-  
-    h1 {
-      font-size: 2.5rem;
-    }
-  
-    .role {
-      font-size: 2rem;
-    }
-  
-    .background-text {
-      font-size: 5rem;
-    }
-  }
-  
-  /* Projects Section */
-  .projects {
-    padding: 5rem 5%;
-    background-color: #f8f9fa;
-  }
-  
-  .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #1a1a1a;
-  }
-  
-  .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .project-box {
-    perspective: 1000px;
-    height: 400px;
-  }
-  
-  .project-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.8s;
-  }
-  
-  .project-box:hover .project-content {
-    transform: rotateY(180deg);
-  }
-  
-  .project-front,
-  .project-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 15px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-front {
-    background: linear-gradient(145deg, #ffffff, #f3f3f3);
-  }
-  
-  .project-back {
-    transform: rotateY(180deg);
-    background: linear-gradient(145deg, #ff7b7b, #ff6666);
-    color: white;
-    text-align: center;
-  }
-  
-  .project-icon {
-    font-size: 4rem;
-    color: #ff7b7b;
-    margin-bottom: 1.5rem;
-  }
-  
-  .project-front h3 {
-    font-size: 1.5rem;
-    color: #1a1a1a;
-    margin-top: 1rem;
-  }
-  
-  .project-back h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .project-back p {
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-  
-  .tech-stack {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-  }
-  
-  .tech-stack span {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.9rem;
-  }
-  
-  .project-link {
-    color: white;
-    text-decoration: none;
-    padding: 0.8rem 1.5rem;
-    border: 2px solid white;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-  }
-  
-  .project-link:hover {
-    background: white;
-    color: #ff7b7b;
-  }
-  
-  /* Add animation for project boxes */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .project-box {
-    opacity: 0;
-    animation: fadeInUp 0.6s ease forwards;
-  }
-  
-  .project-box:nth-child(1) {
-    animation-delay: 0.2s;
-  }
-  
-  .project-box:nth-child(2) {
-    animation-delay: 0.4s;
-  }
-  
-  .project-box:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .projects {
-      padding: 3rem 5%;
-    }
-  
-    .section-title {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-  
-    .project-box {
-      height: 350px;
-    }
-  }
-  
-  /* Skills Section */
-  .skills {
-    padding: 5rem 5%;
-    background-color: #ffffff;
-  }
-  
-  .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .skill-category {
-    background: #f8f9fa;
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .skill-category:hover {
-    transform: translateY(-5px);
-  }
-  
-  .skill-category h3 {
-    font-size: 1.5rem;
-    color: #1a1a1a;
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  
-  .skill-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .skill-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
-    background: white;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-  }
-  
-  .skill-item:hover {
-    background: #ff7b7b;
-    color: white;
-    transform: translateX(5px);
-  }
-  
-  .skill-item i {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    color: #ff7b7b;
-    transition: color 0.3s ease;
-  }
-  
-  .skill-item:hover i {
-    color: white;
-  }
-  
-  .skill-item span {
-    font-size: 1rem;
-  }
-  
-  /* Skill level indicator */
-  .skill-item::after {
-    content: "";
-    height: 10px;
-    background: #ff7b7b;
-    border-radius: 5px;
-    margin-left: auto;
-    transition: width 0.5s ease;
-  }
-  
-  .skill-item[data-skill="JavaScript"]::after,
-  .skill-item[data-skill="HTML"]::after,
-  .skill-item[data-skill="CSS"]::after,
-  .skill-item[data-skill="React"]::after {
-    width: 90%;
-  }
-  
-  .skill-item[data-skill="Python"]::after,
-  .skill-item[data-skill="Node.js"]::after,
-  .skill-item[data-skill="Express.js"]::after {
-    width: 80%;
-  }
-  
-  .skill-item[data-skill="Java"]::after,
-  .skill-item[data-skill="MongoDB"]::after,
-  .skill-item[data-skill="MySQL"]::after {
-    width: 70%;
-  }
-  
-  /* Animation for skill items */
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .skill-item {
-    opacity: 0;
-    animation: slideInRight 0.5s ease forwards;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .skills {
-      padding: 3rem 5%;
-    }
-  
-    .skill-category {
-      padding: 1.5rem;
-    }
-  
-    .skill-item {
-      padding: 0.5rem;
-    }
-  
-    .skill-item i {
-      font-size: 1.2rem;
-    }
-  
-    .skill-item span {
-      font-size: 0.9rem;
-    }
-  }
-  
-  /* Update the existing projects section styles in your style.css */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
 
-.projects {
-    padding: 5rem 5%;
-    background-color: #f8f9fa;
-  }
-  
-  .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .project-box {
-    perspective: 1000px;
-    height: 350px;
-  }
-  
-  .project-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.8s;
-  }
-  
-  .project-box:hover .project-content {
-    transform: rotateY(180deg);
-  }
-  
-  .project-front,
-  .project-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 15px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-front {
-    background: linear-gradient(145deg, #ffffff, #f3f3f3);
-  }
-  
-  .project-back {
-    transform: rotateY(180deg);
-    background: linear-gradient(145deg, #ff7b7b, #ff6666);
-    color: white;
-    text-align: center;
-  }
-  
-  .project-icon {
-    font-size: 3rem;
-    color: #ff7b7b;
-    margin-bottom: 1rem;
-  }
-  
-  .project-front h3 {
-    font-size: 1.3rem;
-    color: #1a1a1a;
-    margin-top: 1rem;
-    text-align: center;
-  }
-  
-  .project-back h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .project-back p {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-    line-height: 1.4;
-  }
-  
-  .tech-stack {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-  
-  .tech-stack span {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0.2rem 0.6rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-  }
-  
-  .project-link {
-    color: white;
-    text-decoration: none;
-    padding: 0.6rem 1.2rem;
-    border: 2px solid white;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-  }
-  
-  .project-link:hover {
-    background: white;
-    color: #ff7b7b;
-  }
-  
-  /* Update the animation for project boxes */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .project-box {
-    opacity: 0;
-    animation: fadeInUp 0.6s ease forwards;
-  }
-  
-  .project-box:nth-child(1) {
-    animation-delay: 0.1s;
-  }
-  .project-box:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  .project-box:nth-child(3) {
-    animation-delay: 0.3s;
-  }
-  .project-box:nth-child(4) {
-    animation-delay: 0.4s;
-  }
-  .project-box:nth-child(5) {
-    animation-delay: 0.5s;
-  }
-  .project-box:nth-child(6) {
-    animation-delay: 0.6s;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .projects {
-      padding: 3rem 5%;
-    }
-  
-    .project-box {
-      height: 300px;
-    }
-  
-    .project-icon {
-      font-size: 2.5rem;
-    }
-  
-    .project-front h3,
-    .project-back h3 {
-      font-size: 1.1rem;
-    }
-  
-    .project-back p {
-      font-size: 0.8rem;
-    }
-  
-    .tech-stack span {
-      font-size: 0.7rem;
-    }
-  
-    .project-link {
-      font-size: 0.8rem;
-      padding: 0.5rem 1rem;
-    }
-  }
-  
-  /* Contact Section */
-  .contact {
-    padding: 5rem 5%;
-    background-color: #ffffff;
-  }
-  
-  .contact-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 2rem;
-  }
-  
-  .contact-info,
-  .contact-form {
-    flex: 1;
-  }
-  
-  .contact-info h3,
-  .contact-form h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #1a1a1a;
-  }
-  
-  .contact-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .contact-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  
-  .contact-list i {
-    font-size: 1.2rem;
-    color: #ff7b7b;
-    margin-right: 1rem;
-    width: 20px;
-  }
-  
-  .contact-list a {
-    color: #1a1a1a;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .contact-list a:hover {
-    color: #ff7b7b;
-  }
-  
-  .form-group {
-    margin-bottom: 1.5rem;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #1a1a1a;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  .form-group textarea {
-    height: 150px;
-    resize: vertical;
-  }
-  
-  .submit-btn {
-    background-color: #ff7b7b;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-btn:hover {
-    background-color: #ff6666;
-  }
-  
-  /* Animation for contact section */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .contact-info,
-  .contact-form {
-    opacity: 0;
-    animation: fadeInUp 0.6s ease forwards;
-  }
-  
-  .contact-info {
-    animation-delay: 0.2s;
-  }
-  
-  .contact-form {
-    animation-delay: 0.4s;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .contact-container {
-      flex-direction: column;
-    }
-  
-    .contact-info,
-    .contact-form {
-      width: 100%;
-    }
-  }
-  
-  
-</style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ff7b7b;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ff7b7b;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-icons a {
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ff7b7b;
+        }
+
+        /* Hero section styles */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            position: relative;
+            margin-top: 2rem;
+        }
+
+        .hero-content {
+            flex: 1;
+            z-index: 1;
+        }
+
+        .greeting {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .role {
+            font-size: 2.5rem;
+            color: #ff7b7b;
+            margin-bottom: 0.5rem;
+        }
+
+        .location {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background-color: #ff7b7b;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff6666;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .hero-image img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        .background-text {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 15rem;
+            font-weight: 700;
+            color: rgba(255, 123, 123, 0.1);
+            z-index: 0;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 5rem 5%;
+            background-color: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a1a1a;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-box {
+            perspective: 1000px;
+            height: 350px;
+        }
+
+        .project-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+
+        .project-box:hover .project-content {
+            transform: rotateY(180deg);
+        }
+
+        .project-front, .project-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-front {
+            background: linear-gradient(145deg, #ffffff, #f3f3f3);
+        }
+
+        .project-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(145deg, #ff7b7b, #ff6666);
+            color: white;
+            text-align: center;
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            color: #ff7b7b;
+            margin-bottom: 1rem;
+        }
+
+        .project-front h3 {
+            font-size: 1.3rem;
+            color: #1a1a1a;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .project-back h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-back p {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .tech-stack span {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.2rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .project-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border: 2px solid white;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .project-link:hover {
+            background: white;
+            color: #ff7b7b;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 5rem 5%;
+            background-color: #ffffff;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .skill-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            background: white;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: #ff7b7b;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .skill-item i {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: #ff7b7b;
+            transition: color 0.3s ease;
+        }
+
+        .skill-item:hover i {
+            color: white;
+        }
+
+        .skill-item span {
+            font-size: 1rem;
+        }
+
+        /* Skill level indicator */
+        .skill-item::after {
+            content: '';
+            height: 10px;
+            background: #ff7b7b;
+            border-radius: 5px;
+            margin-left: auto;
+            transition: width 0.5s ease;
+        }
+
+        .skill-item[data-skill="JavaScript"]::after,
+        .skill-item[data-skill="HTML"]::after,
+        .skill-item[data-skill="CSS"]::after,
+        .skill-item[data-skill="React"]::after {
+            width: 90%;
+        }
+
+        .skill-item[data-skill="Python"]::after,
+        .skill-item[data-skill="Node.js"]::after,
+        .skill-item[data-skill="Express.js"]::after {
+            width: 80%;
+        }
+
+        .skill-item[data-skill="Java"]::after,
+        .skill-item[data-skill="MongoDB"]::after,
+        .skill-item[data-skill="MySQL"]::after {
+            width: 70%;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 5%;
+            background-color: #ffffff;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 2rem;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1;
+        }
+
+        .contact-info h3, .contact-form h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .contact-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-list i {
+            font-size: 1.2rem;
+            color: #ff7b7b;
+            margin-right: 1rem;
+            width: 20px;
+        }
+
+        .contact-list a {
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-list a:hover {
+            color: #ff7b7b;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #ff7b7b;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #ff6666;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .project-box, .skill-item, .contact-info, .contact-form {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* Responsive design */
+        @media (max-width: 1024px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 5rem;
+            }
+
+            .hero-content {
+                margin-bottom: 2rem;
+            }
+
+            .background-text {
+                font-size: 10rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                font-size: 22px;
+                font-weight: bold;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .role {
+                font-size: 2rem;
+            }
+
+            .background-text {
+                font-size: 5rem;
+            }
+
+            .projects, .skills, .contact {
+                padding: 3rem 5%;
+            }
+
+            .project-box {
+                height: 300px;
+            }
+
+            .project-icon {
+                font-size: 2.5rem;
+            }
+
+            .project-front h3, .project-back h3 {
+                font-size: 1.1rem;
+            }
+
+            .project-back p {
+                font-size: 0.8rem;
+            }
+
+            .tech-stack span {
+                font-size: 0.7rem;
+            }
+
+            .project-link {
+                font-size: 0.8rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-info, .contact-form {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">Portfolio.</div>
-        <nav>
+        <nav style="font-size: 22px;">
             <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+        <div class="social-icons"  style="font-size: 22px;">
+            <a href="https://www.facebook.com/pratik.javale.35" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/_pratik_javale_7/" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </header>
 
@@ -1367,258 +580,305 @@
                 <h1>I'm <span class="name">Pratik Javale</span></h1>
                 <h2 class="role">Frontend Developer</h2>
                 <p class="location">From Kolhapur</p>
-                <button class="cta-button">Hire Me</button>
+                <!-- <button class="cta-button">Hire Me</button> -->
             </div>
             <div class="hero-image">
                 <img src="abcd.png" alt="Professional headshot">
             </div>
             <div class="background-text">Portfolio</div>
         </section>
+
+        <section id="projects" class="projects">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-container">
+                <div class="project-box">
+                    <div class="project-content">
+                        <div class="project-front">
+                            <i class="fas fa-briefcase project-icon"></i>
+                            <h3>Job Portal Website</h3>
+                        </div>
+                        <div class="project-back">
+                            <h3>Job Portal Website</h3>
+                            <p>A comprehensive job search platform with advanced  user profiles, and application tracking.</p>
+                            <div class="tech-stack">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                            <a href="https://github.com/javalepratik7/JobHunt" target="_blank" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-box">
+                    <div class="project-content">
+                        <div class="project-front">
+                            <i class="fas fa-plane-departure project-icon"></i>
+                            <h3>Travel Marketplace</h3>
+                        </div>
+                        <div class="project-back">
+                            <h3>Travel Marketplace</h3>
+                            <p>An online platform for booking travel experiences, tours, and accommodations worldwide.</p>
+                            <div class="tech-stack">
+                                <span>React</span>
+                                <span>Express</span>
+                                <span>MongoDB</span>
+                            </div>
+                            <a href="#" target="_blank" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-box">
+                    <div class="project-content">
+                        <div class="project-front">
+                            <i class="fas fa-cloud-sun project-icon"></i>
+                            <h3>Weather Platform</h3>
+                        </div>
+                        <div class="project-back">
+                            <h3>Weather Platform</h3>
+                            <p>Real-time weather forecasting platform with interactive maps and detailed weather data.</p>
+                            <div class="tech-stack">
+                                <span>JavaScript</span>
+                                <span>Weather API</span>
+                                <span>CSS</span>
+                            </div>
+                            <a href="https://github.com/javalepratik7/weather" target="_blank" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-box">
+                    <div class="project-content">
+                        <div class="project-front">
+                            <i class="fas fa-hard-hat project-icon"></i>
+                            <h3>Construction Site Portfolio</h3>
+                        </div>
+                        <div class="project-back">
+                            <h3>Construction Site Portfolio</h3>
+                            <p>A dynamic portfolio showcasing construction projects with before-and-after galleries and client testimonials.</p>
+                            <div class="tech-stack">
+                                <span>React</span>
+                                <span>Javascript</span>
+                                <span>CSS</span>
+                            </div>
+                            <a href="https://github.com/javalepratik7/construction-site" target="_blank" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-box">
+                    <div class="project-content">
+                        <div class="project-front">
+                            <i class="fas fa-newspaper project-icon"></i>
+                            <h3>Daily News Platform</h3>
+                        </div>
+                        <div class="project-back">
+                            <h3>Daily News Platform</h3>
+                            <p>A responsive news aggregator with personalized content, real-time updates, and user engagement features.</p>
+                            <div class="tech-stack">
+                                <span>Javascript</span>
+                                <span>API</span>
+                                <span>MongoDB</span>
+                            </div>
+                            <a href="https://github.com/javalepratik7/projects/tree/main/project/News" target="_blank" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-box">
+                    <div class="project-content">
+                        <div class="project-front">
+                            <i class="fas fa-shopping-cart project-icon"></i>
+                            <h3>Amazon Clone</h3>
+                        </div>
+                        <div class="project-back">
+                            <h3>Amazon Clone</h3>
+                            <p>Creating an Amazon front-end clone involves structuring pages with HTML, styling with CSS for responsiveness, and using JavaScript for interactivity like dynamic cart updates and search functionality.</p>
+                            <div class="tech-stack">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Javascript</span>
+                            </div>
+                            <a href="https://github.com/javalepratik7/projects/tree/main/project/amazon-clone-main" target="_blank" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item" data-skill="JavaScript">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </li>
+                        <li class="skill-item" data-skill="Python">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </li>
+                        <li class="skill-item" data-skill="Java">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item" data-skill="HTML">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML</span>
+                        </li>
+                        <li class="skill-item" data-skill="CSS">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS</span>
+                        </li>
+                        <li class="skill-item" data-skill="JavaScript">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </li>
+                        <li class="skill-item" data-skill="React">
+                            <i class="fab fa-react"></i>
+                            <span>React.js</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item" data-skill="Node.js">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </li>
+                        <li class="skill-item" data-skill="Express.js">
+                            <i class="fab fa-node-js"></i>
+                            <span>Express.js</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item" data-skill="MongoDB">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </li>
+                        <li class="skill-item" data-skill="MySQL">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p style="margin-bottom: 50px;">Feel free to reach out through any of these platforms:</p>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:pratikjavale712@gmail.com">pratikjavale712@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/pratik-javale-23262126a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/javalepratik7" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Replace the existing projects section with this updated version -->
-<section id="projects" class="projects">
-    <h2 class="section-title">My Projects</h2>
-    <div class="projects-container">
-        <!-- Job Portal Project -->
-        <div class="project-box">
-            <div class="project-content">
-                <div class="project-front">
-                    <i class="fas fa-briefcase project-icon"></i>
-                    <h3>Job Portal Website</h3>
-                </div>
-                <div class="project-back">
-                    <h3>Job Portal Website</h3>
-                    <p>A comprehensive job search platform with advanced filtering, user profiles, and application tracking.</p>
-                    <div class="tech-stack">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                    </div>
-                    <a href="https://github.com/javalepratik7/JobHunt" target="_blank" class="project-link">View Project</a>
-                </div>
-            </div>
-        </div>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
 
-        <!-- Travel Marketplace Project -->
-        <div class="project-box">
-            <div class="project-content">
-                <div class="project-front">
-                    <i class="fas fa-plane-departure project-icon"></i>
-                    <h3>Travel Marketplace</h3>
-                </div>
-                <div class="project-back">
-                    <h3>Travel Marketplace</h3>
-                    <p>An online platform for booking travel experiences, tours, and accommodations worldwide.</p>
-                    <div class="tech-stack">
-                        <span>Vue.js</span>
-                        <span>Express</span>
-                        <span>PostgreSQL</span>
-                    </div>
-                    <a href="#"  target="_blank" class="project-link">View Project</a>
-                </div>
-            </div>
-        </div>
+        // Handle form submission
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    // Here you would typically send the form data to a server
+                    // For this example, we'll just log it to the console
+                    const formData = new FormData(contactForm);
+                    console.log('Form submitted with data:', Object.fromEntries(formData));
+                    alert('Thank you for your message! I\'ll get back to you soon.');
+                    contactForm.reset();
+                });
+            }
+        });
 
-        <!-- Weather Platform Project -->
-        <div class="project-box">
-            <div class="project-content">
-                <div class="project-front">
-                    <i class="fas fa-cloud-sun project-icon"></i>
-                    <h3>Weather Platform</h3>
-                </div>
-                <div class="project-back">
-                    <h3>Weather Platform</h3>
-                    <p>Real-time weather forecasting platform with interactive maps and detailed weather data.</p>
-                    <div class="tech-stack">
-                        <span>JavaScript</span>
-                        <span>Weather API</span>
-                        <span>CSS3</span>
-                    </div>
-                    <a href="https://github.com/javalepratik7/projects/tree/main/project/weather" target="_blank" class="project-link">View Project</a>
-                </div>
-            </div>
-        </div>
+        // Intersection Observer for animations
+        const observeElements = (elements, options) => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
 
-        <!-- Construction Site Portfolio -->
-        <div class="project-box">
-            <div class="project-content">
-                <div class="project-front">
-                    <i class="fas fa-hard-hat project-icon"></i>
-                    <h3>Construction Site Portfolio</h3>
-                </div>
-                <div class="project-back">
-                    <h3>Construction Site Portfolio</h3>
-                    <p>A dynamic portfolio showcasing construction projects with before-and-after galleries and client testimonials.</p>
-                    <div class="tech-stack">
-                        <span>React</span>
-                        <span>Javascript</span>
-                        <span>Tailwind CSS</span>
-                    </div>
-                    <a href="https://github.com/javalepratik7/construction-site" target="_blank" class="project-link">View Project</a>
-                </div>
-            </div>
-        </div>
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = `opacity 0.6s ease, transform 0.6s ease`;
+                el.style.transitionDelay = `${index * 0.1}s`;
+                observer.observe(el);
+            });
+        };
 
-        <!-- Daily News Platform -->
-        <div class="project-box">
-            <div class="project-content">
-                <div class="project-front">
-                    <i class="fas fa-newspaper project-icon"></i>
-                    <h3>Daily News Platform</h3>
-                </div>
-                <div class="project-back">
-                    <h3>Daily News Platform</h3>
-                    <p>A responsive news aggregator with personalized content, real-time updates, and user engagement features.</p>
-                    <div class="tech-stack">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Javascript</span>
-                    </div>
-                    <a href="https://github.com/javalepratik7/projects/tree/main/project/News" target="_blank" class="project-link">View Project</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Amazon Clone -->
-        <div class="project-box">
-            <div class="project-content">
-                <div class="project-front">
-                    <i class="fas fa-shopping-cart project-icon"></i>
-                    <h3>Amazon Clone</h3>
-                </div>
-                <div class="project-back">
-                    <h3>Amazon Clone</h3>
-                    <p>A full-stack e-commerce platform mimicking Amazon's core features, including user authentication, product listings, and a shopping cart.</p>
-                    <div class="tech-stack">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Javascript</span>
-                    </div>
-                    <a href="https://github.com/javalepratik7/projects/tree/main/project/amazon-clone-main" target="_blank" class="project-link">View Project</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section id="skills" class="skills">
-    <h2 class="section-title">My Skills</h2>
-    <div class="skills-container">
-        <div class="skill-category">
-            <h3>Programming Languages</h3>
-            <ul class="skill-list">
-                <li class="skill-item" data-skill="JavaScript">
-                    <i class="fab fa-js"></i>
-                    <span>JavaScript</span>
-                </li>
-                <li class="skill-item" data-skill="Python">
-                    <i class="fab fa-python"></i>
-                    <span>Python</span>
-                </li>
-                <li class="skill-item" data-skill="Java">
-                    <i class="fab fa-java"></i>
-                    <span>Java</span>
-                </li>
-            </ul>
-        </div>
-        <div class="skill-category">
-            <h3>Frontend</h3>
-            <ul class="skill-list">
-                <li class="skill-item" data-skill="HTML">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML</span>
-                </li>
-                <li class="skill-item" data-skill="CSS">
-                    <i class="fab fa-css3-alt"></i>
-                    <span>CSS</span>
-                </li>
-                <li class="skill-item" data-skill="JavaScript">
-                    <i class="fab fa-js"></i>
-                    <span>JavaScript</span>
-                </li>
-                <li class="skill-item" data-skill="React">
-                    <i class="fab fa-react"></i>
-                    <span>React.js</span>
-                </li>
-            </ul>
-        </div>
-        <div class="skill-category">
-            <h3>Backend</h3>
-            <ul class="skill-list">
-                <li class="skill-item" data-skill="Node.js">
-                    <i class="fab fa-node-js"></i>
-                    <span>Node.js</span>
-                </li>
-                <li class="skill-item" data-skill="Express.js">
-                    <i class="fab fa-node-js"></i>
-                    <span>Express.js</span>
-                </li>
-            </ul>
-        </div>
-        <div class="skill-category">
-            <h3>Databases</h3>
-            <ul class="skill-list">
-                <li class="skill-item" data-skill="MongoDB">
-                    <i class="fas fa-database"></i>
-                    <span>MongoDB</span>
-                </li>
-                <li class="skill-item" data-skill="MySQL">
-                    <i class="fas fa-database"></i>
-                    <span>MySQL</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-    
-<section id="contact" class="contact">
-    <h2 class="section-title">Contact Me</h2>
-    <div class="contact-container">
-        <div class="contact-info">
-            <h3>Get in Touch</h3>
-            <p style="margin-bottom: 30px;">Feel free to reach out through any of these platforms:</p>
-            <ul class="contact-list">
-                <li>
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:pratikjavale712@gmail.com">pratikjavale712@gmail.com</a>
-                </li>
-                <li>
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/pratik-javale-23262126a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-                </li>
-                <li>
-                    <i class="fab fa-github"></i>
-                    <a href="https://github.com/javalepratik7" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-                </li>
-            </ul>
-        </div>
-        <div class="contact-form">
-            <h3>Send a Message</h3>
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-
-
-
-    <script src="script.js"></script>
+        // Initialize the observers when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const options = { threshold: 0.1 };
+            observeElements(document.querySelectorAll('.project-box'), options);
+            observeElements(document.querySelectorAll('.skill-item'), options);
+            observeElements(document.querySelectorAll('.contact-info, .contact-form'), options);
+        });
+    </script>
 </body>
 </html>
 
